@@ -1,0 +1,7 @@
+syntax = "proto3";
+package nameservice.nameservice;
+
+option go_package = "nameservice/x/nameservice/types";
+
+// Msg defines the Msg service.
+service Msg {}
