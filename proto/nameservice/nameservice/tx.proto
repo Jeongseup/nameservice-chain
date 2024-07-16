@@ -6,8 +6,9 @@ option go_package = "nameservice/x/nameservice/types";
 
 // Msg defines the Msg service.
 service Msg {
-  rpc BuyName (MsgBuyName) returns (MsgBuyNameResponse);
-  rpc SetName (MsgSetName) returns (MsgSetNameResponse);
+  rpc BuyName    (MsgBuyName   ) returns (MsgBuyNameResponse   );
+  rpc SetName    (MsgSetName   ) returns (MsgSetNameResponse   );
+  rpc DeleteName (MsgDeleteName) returns (MsgDeleteNameResponse);
 }
 message MsgBuyName {
   string creator = 1;
@@ -24,4 +25,11 @@ message MsgSetName {
 }
 
 message MsgSetNameResponse {}
+
+message MsgDeleteName {
+  string creator = 1;
+  string name    = 2;
+}
+
+message MsgDeleteNameResponse {}
 
